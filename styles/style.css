@@ -40,7 +40,9 @@ body {
 }
 
 .presentacion {
-    padding: 5% 10%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 0;
     display: flex;
     align-items: center;
     margin: 5%;
@@ -70,30 +72,39 @@ body {
     font-family: var(--fuente-montserrat);
 }
 
-.presentacion__enlaces {
+.presentacion__redes {
     display: flex;
-    justify-content: space-between;
-    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-link {
+    display: flex;
     align-items: center;
-    gap: 10px;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-.presentacion__enlaces__link {
-    width: 40%;
-    background-color: var(--color-secundario);
-    text-align: center;
-    padding: 21.5px 0px;
-    border-radius: 16px;
-    font-family: var(--fuente-montserrat);
-    font-size: 1.25rem;
-    font-weight: 600;
-    text-decoration: none;
-    margin-bottom: 10px;
-    color: var(--color-terciario);
+/* Ajustar las imágenes dentro de los botones */
+.social-link img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-.presentacion__enlaces__link:hover {
-    background-color: rgb(253, 226, 235);
+/* Efecto hover */
+.social-link:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
 }
 
 .presentacion__imagen {
